@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #1A0B2E;
+  color: white;
+}
+
+/*navigation bar*/
+
+.navbar {
+  background: #412567;
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;  
+}
+
+#logo-color{  
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-arrow {
+  background: linear-gradient(to bottom right, #F7E93F, #FB09B4, #9100F8);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn-arrow::after {
+  content: "→";
+  margin-left: 8px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 576px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+  }
+  .btn-arrow{
+    display: none;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
